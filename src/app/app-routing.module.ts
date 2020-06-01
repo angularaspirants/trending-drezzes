@@ -7,6 +7,7 @@ import { KidsComponent } from './kids/kids.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { WomenListComponent } from './women/women-list/women-list.component';
 import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
@@ -24,7 +25,8 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    WomenListComponent
   ],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule, HomeComponent, HeaderComponent, FooterComponent]
