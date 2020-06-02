@@ -1,0 +1,11 @@
+
+  th{
+    color: purple;
+    background-color: papayawhip;
+  }
+
+  table, tr {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+  }
