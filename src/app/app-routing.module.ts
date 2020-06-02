@@ -7,8 +7,9 @@ import { KidsComponent } from './kids/kids.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { WomenListComponent } from './women/women-list/women-list.component';
 import { HomeComponent } from './home/home.component';
+import { MenListComponent } from './men/men-list/men-list.component';
+import { MenItemComponent } from './men-item/men-item.component';
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
       {path: 'men', component: MenComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
     FooterComponent,
     NavbarComponent,
     HomeComponent,
-    WomenListComponent
+    MenListComponent,
+    MenItemComponent,
   ],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule, HomeComponent, HeaderComponent, FooterComponent]
