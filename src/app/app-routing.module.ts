@@ -9,7 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { MenListComponent } from './men/men-list/men-list.component';
-import { MenItemComponent } from './men-item/men-item.component';
+import { CommonModule } from '@angular/common';
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
       {path: 'men', component: MenComponent},
@@ -28,9 +28,8 @@ const routes: Routes = [
     NavbarComponent,
     HomeComponent,
     MenListComponent,
-    MenItemComponent,
   ],
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule, HomeComponent, HeaderComponent, FooterComponent]
+  imports: [RouterModule.forRoot(routes), CommonModule],
+  exports: [RouterModule, HomeComponent, HeaderComponent, FooterComponent, CommonModule]
 })
 export class AppRoutingModule { }
