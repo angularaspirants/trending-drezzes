@@ -1,8 +1,8 @@
 export class MenModel {
     constructor(
-        public itemName: string,
-        public itemImgPath: string,
-        public itemPrice: number
+        public name: string,
+        public imgPath: string,
+        public price: string
     ){
     }
 }
