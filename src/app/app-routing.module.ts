@@ -10,6 +10,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { MenListComponent } from './men/men-list/men-list.component';
 import { MenItemComponent } from './men-item/men-item.component';
+import { WomenListComponent } from './women/women-list/women-list.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
       {path: 'men', component: MenComponent},
@@ -29,8 +32,9 @@ const routes: Routes = [
     HomeComponent,
     MenListComponent,
     MenItemComponent,
+    WomenListComponent
   ],
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule, HomeComponent, HeaderComponent, FooterComponent]
+  imports: [RouterModule.forRoot(routes), CommonModule, FormsModule],
+  exports: [RouterModule, HomeComponent, HeaderComponent, FooterComponent, CommonModule]
 })
 export class AppRoutingModule { }

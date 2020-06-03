@@ -1,6 +1,6 @@
-export class WomenModel{
+export class WomenItemModel{
     constructor(public item: string, 
-                public price: number, 
+                public price: string, 
                 public image: string){
         
     }

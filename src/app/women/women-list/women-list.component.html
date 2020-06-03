@@ -1,19 +1,12 @@
 <table>
-    <thead>
-        <tr>
-            <th>Item</th>
-            <th>Size</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Total Price</th>
-            <th>Final</th>
-        </tr>
-    </thead>
     <tbody>
       <tr *ngFor="let womenItem of womenItems">
         <td>
-          <img src="{{ womenItem.image }}">
-          {{ womenItem.item }}
+          <div>
+            <tr><img src="{{ womenItem.image }}"></tr>
+            <tr id="tr1">{{ womenItem.item }}</tr>
+          </div>
+         
         </td>
         <td>
           <select id="size" name="size">
@@ -24,32 +17,18 @@
           </select>
         </td>
         <td>
-          <input type="number">
+          <!-- <input appHighlight [setTextBorder]="'2px solid gray'" type="number" (keyup)="onKeyUp($event)" [(ngModel)]="quantity"> -->
+          <input (keyup)="onKeyUp($event)" [(ngModel)]="quantity">
         </td>
         <td>
             {{ womenItem.price }}
         </td>
         <td>
-            total
+            {{ totalPrice }}
         </td>
         <td>
           <button>Add to Cart</button>
         </td>
       </tr>
-
-      <!-- <tr>
-        <td>
-          item</td>
-        <td><select id="size" name="size">
-          <option value="XS">XS</option>
-          <option value="S">S</option>
-          <option value="M">M</option>
-          <option value="L">L</option>
-          </select></td> 
-        <td><input type="number"></td>
-        <td>price</td>
-        <td>total</td>
-        <td><button>Add to Cart</button></td>
-      </tr> -->
     </tbody>
 </table>
