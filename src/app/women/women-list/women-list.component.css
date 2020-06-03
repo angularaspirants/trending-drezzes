@@ -20,6 +20,7 @@
   }
   button{
     background-color:lightgreen;
+    font-style: italic;
   }
   #tr1{
     height: 10px;
@@ -28,3 +29,6 @@
   /* td{
     line-break: normal;
   } */
+  div{
+    width: 90px;
+  }
