@@ -12,6 +12,7 @@ import { MenListComponent } from './men/men-list/men-list.component';
 import { WomenListComponent } from './women/women-list/women-list.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { KidListComponent } from './kids/kid-list/kid-list.component';
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
       {path: 'men', component: MenComponent},
@@ -30,7 +31,8 @@ const routes: Routes = [
     NavbarComponent,
     HomeComponent,
     MenListComponent,
-    WomenListComponent
+    WomenListComponent,
+    KidListComponent
   ],
   imports: [RouterModule.forRoot(routes), CommonModule, FormsModule],
   exports: [RouterModule, HomeComponent, HeaderComponent, FooterComponent, CommonModule]
