@@ -1,33 +1,26 @@
-<table>
-    <tbody>
-      <tr *ngFor="let womenItem of womenItems">
-        <td>
-          <div>
-            <tr><img src="{{ womenItem.image }}"></tr>
-            <tr id="tr1">{{ womenItem.item }}</tr>
-          </div>
-        </td>
-        <td>
-          <select id="size" name="size">
-          <option value="XS">XS</option>
-          <option value="S">S</option>
-          <option value="M">M</option>
-          <option value="L">L</option>
-          </select>
-        </td>
-        <td>
-          <!-- <input appHighlight [setTextBorder]="'2px solid gray'" type="number" (keyup)="onKeyUp($event)" [(ngModel)]="quantity"> -->
-          <input (keyup)="onKeyUp($event)" [(ngModel)]="quantity">
-        </td>
-        <td>
-            {{ womenItem.price }}
-        </td>
-        <td>
-            {{ totalPrice }}
-        </td>
-        <td>
-          <button>Add to Cart</button>
-        </td>
-      </tr>
-    </tbody>
-</table>
+<div class="row" *ngFor="let womenItem of womenItems">
+  <div class="column">
+    <img src="{{ womenItem.image }}"
+    style="max-height: 250px;">
+    <label id="tr1">{{ womenItem.item }}</label>
+  </div>
+  <div class="column">
+    <h5 style="padding: 60px;">{{ womenItem.price }}</h5>
+  </div>
+  <div class="column"> 
+    <select>
+      <option  *ngFor="let size of getSize(womenItem.item)">{{ size }}</option>
+    </select>
+  </div>
+  <div class="column">
+    <h6>Qty</h6>
+    <input type="text" (keyup)="onKeyUp($event)">
+  </div>
+  <div class="column">
+    {{ totalPrice }}
+  </div>
+  
+  <div class="column">
+    <button>Add to Bag</button>
+  </div>
+</div>
