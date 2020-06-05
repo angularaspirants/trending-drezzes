@@ -5,32 +5,27 @@
     <div class="column">
         <img [src]="item.imgPath" 
             class="clearfix"
-            style="max-height: 300px;">
+            style="max-height: 200px;">
     </div>
     <div class="column">
         <h3 style="column-count: 3;" style="float: right;">{{ item.name }}</h3>
     </div>
     <div class="column">
-        <h5 style="column-count: 3;" style="float: right;">{{ item.price }}</h5>
+        <h5 style="column-count: 3;" style="float: right;">${{ item.price }}</h5>
     </div>
     <div class="column">
         <h5>Qty</h5>
-        <input type="number" min="1" max="10" value="7">
+        <input type="number" min="1" max="10" value="0">
     </div>
     <div class="column">
         <div style="width: 200%;">
             <select>
-              <option value="0">Size</option>
-              <option value="1">XS</option>
-              <option value="2">S</option>
-              <option value="3">M</option>
-              <option value="4">L</option>
-              <option value="5">XL</option>
-              <option value="6">XXL</option>
+                <option>Size</option>
+                <option *ngFor="let size of getSize(item.name)" [value]="size">{{size}}</option>
             </select>
           </div>
     </div>
-    <!-- <div class="column">
-        <button>Add to Cart</button>
-    </div> -->
+    <div class="column">
+        <button style="background-color:palevioletred;">Add to Cart</button>
+    </div>
 </div>
