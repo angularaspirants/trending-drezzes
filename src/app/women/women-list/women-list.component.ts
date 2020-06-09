@@ -10,22 +10,13 @@ import { WomenSizeService } from 'src/app/shared/women-size.service';
   providers: [WomenItemService, WomenSizeService],
 })
 export class WomenListComponent implements OnInit {
-womenItems = [new WomenItemModel('shirt','$45','../../assets/t-shirt.jpg')];
-totalPrice: number;
-quantity: number;
-  constructor(private womenItemService: WomenItemService, private womenSizeService: WomenSizeService) { }
+womenItems = [new WomenItemModel('shirt',25.99,'../../assets/t-shirt.jpg',0,0)];
+
+  constructor(private womenItemService: WomenItemService) { }
 
   ngOnInit(): void {
     this.womenItems = this.womenItemService.womenItems;
   }
-  // onKeyUp(event: any){
-  //   this.totalPrice = event.target.value * 45.99;
-  // }
-  getSize(type: string){
-    return this.womenSizeService.getSize(type);
-
-  }
-  onKeyUp(event: any){
-    this.totalPrice = event.target.value * 11;
-  }
+ 
+ 
 }

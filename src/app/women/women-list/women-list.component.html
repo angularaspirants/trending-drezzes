@@ -1,26 +1,3 @@
-<div class="row" *ngFor="let womenItem of womenItems">
-  <div class="column">
-    <img src="{{ womenItem.image }}"
-    style="max-height: 250px;">
-    <label id="tr1">{{ womenItem.item }}</label>
-  </div>
-  <div class="column">
-    <h5 style="padding: 60px;">{{ womenItem.price }}</h5>
-  </div>
-  <div class="column"> 
-    <select>
-      <option  *ngFor="let size of getSize(womenItem.item)">{{ size }}</option>
-    </select>
-  </div>
-  <div class="column">
-    <h6>Qty</h6>
-    <input type="text" (keyup)="onKeyUp($event)">
-  </div>
-  <div class="column">
-    {{ totalPrice }}
-  </div>
-  
-  <div class="column">
-    <button>Add to Bag</button>
-  </div>
-</div>
+<app-women-listitem *ngFor="let womenItem of womenItems"
+                      [womenItem]="womenItem"
+></app-women-listitem>
