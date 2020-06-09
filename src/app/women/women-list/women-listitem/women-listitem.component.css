@@ -1,0 +1,13 @@
+.column{
+    height: 250px;
+    float: left;
+    width: 16%;
+}
+button{
+    background-color: green;
+    font-style: italic;
+    font-size: inherit;
+}
+#id1{
+    text-align: center;
+}

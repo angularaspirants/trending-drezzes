@@ -39,6 +39,6 @@ const routes: Routes = [
     PaymentInfoComponent
   ],
   imports: [RouterModule.forRoot(routes), CommonModule, FormsModule],
-  exports: [RouterModule, MenItemComponent, HomeComponent, HeaderComponent, FooterComponent, CommonModule]
+  exports: [RouterModule, MenItemComponent,    HomeComponent, HeaderComponent, FooterComponent, CommonModule]
 })
 export class AppRoutingModule { }
