@@ -12,7 +12,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

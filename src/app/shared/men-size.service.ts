@@ -31,12 +31,6 @@ export class MenSizeService {
     }
   }
 
-  public getTotalPrice(type: number){
-    const multiply: number; (quantity:number, price:number): number => {
-      return this.itemPrice = quantity*price;
-    } 
-  }
-
   constructor() { }
 }
 

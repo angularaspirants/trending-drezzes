@@ -13,6 +13,8 @@ import { WomenListComponent } from './women/women-list/women-list.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { KidListComponent } from './kids/kid-list/kid-list.component';
+import { MenItemComponent } from './men/men-list/men-item/men-item.component';
+import { PaymentInfoComponent } from './payment/payment-info.component';
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
       {path: 'men', component: MenComponent},
@@ -32,9 +34,11 @@ const routes: Routes = [
     HomeComponent,
     MenListComponent,
     WomenListComponent,
-    KidListComponent
+    KidListComponent,
+    MenItemComponent,
+    PaymentInfoComponent
   ],
   imports: [RouterModule.forRoot(routes), CommonModule, FormsModule],
-  exports: [RouterModule, HomeComponent, HeaderComponent, FooterComponent, CommonModule]
+  exports: [RouterModule, MenItemComponent, HomeComponent, HeaderComponent, FooterComponent, CommonModule]
 })
 export class AppRoutingModule { }

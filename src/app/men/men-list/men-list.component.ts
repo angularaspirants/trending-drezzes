@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MenModel } from 'src/app/shared/men.model';
 import { MenService } from 'src/app/shared/men-service';
-import { MenSizeService } from 'src/app/shared/men-size.service';
 
 @Component({
     selector: 'app-men-list',
@@ -10,13 +9,12 @@ import { MenSizeService } from 'src/app/shared/men-size.service';
 })
 export class MenListComponent implements OnInit{
     menItems: MenModel[];
-    constructor(private menService: MenService, private menSizeService: MenSizeService){}
+    constructor(private menService: MenService){}
     ngOnInit(): void {
         this.menItems = this.menService.getMenItems();
     }
-    getSize(x: string){
-        return this.menSizeService.getSize(x);
-    }
+    
+    
 
 
 }
