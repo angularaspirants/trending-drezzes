@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MenModel } from 'src/app/shared/men.model';
 import { MenService } from 'src/app/shared/men-service';
 
@@ -9,10 +9,12 @@ import { MenService } from 'src/app/shared/men-service';
 })
 export class MenListComponent implements OnInit{
     menItems: MenModel[];
-    constructor(private menservice: MenService){}
+    constructor(private menService: MenService){}
     ngOnInit(): void {
-        this.menItems = this.menservice.menItems;
+        this.menItems = this.menService.getMenItems();
     }
+    
+    
 
 
 }

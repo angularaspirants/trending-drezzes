@@ -16,12 +16,18 @@ import { KidlistItemComponent } from './kids/kid-list/kidlist-item/kidlist-item.
 import { DeliveryInfoComponent } from './delivery-info/delivery-info.component';
 
 
+import { MenItemComponent } from './men/men-list/men-item/men-item.component';
+import { PaymentInfoComponent } from './payment/payment-info.component';
+import { WomenListitemComponent } from './women/women-list/women-listitem/women-listitem.component';
+import { CartItemComponent } from './cart-item/cart-item.component';
+// import { PaymentInfoComponent } from './payment/payment-info.component';
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
       {path: 'men', component: MenComponent},
       {path: 'women', component: WomenComponent},
       {path: 'kids', component: KidsComponent},
-      {path: 'deliveryinfo', component: DeliveryInfoComponent}
+      {path: 'delivery-info', component: DeliveryInfoComponent},
+      {path: 'payment-info', component: PaymentInfoComponent}
     ]}
 ];
 
@@ -38,10 +44,14 @@ const routes: Routes = [
     WomenListComponent,
     KidListComponent,
     KidlistItemComponent,
-    DeliveryInfoComponent
-    
+    DeliveryInfoComponent,
+    MenItemComponent,
+    PaymentInfoComponent,
+    WomenListitemComponent,
+    CartItemComponent
+    // PaymentInfoComponent
   ],
   imports: [RouterModule.forRoot(routes), CommonModule, FormsModule],
-  exports: [RouterModule, HomeComponent, HeaderComponent, FooterComponent, CommonModule]
+  exports: [RouterModule, MenItemComponent,    HomeComponent, HeaderComponent, FooterComponent, CommonModule]
 })
 export class AppRoutingModule { }``
