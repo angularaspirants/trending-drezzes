@@ -7,10 +7,10 @@ import { KidItemModel } from './kid-item.model';
 export class KidItemService {
 
   items = [
-    new KidItemModel('../../assets/shirt.png','Shirt', 10), 
-    new KidItemModel('../../assets/short.jpg','Trousers', 9),   
-    new KidItemModel('../../assets/jeans.jpg','Jeans', 8),
-    new KidItemModel('../../assets/tshirt.png','T-shirt', 7)
+    new KidItemModel('../../assets/shirt.png','Shirt', 10, 0, 0), 
+    new KidItemModel('../../assets/short.jpg','Trousers', 9, 0, 0),   
+    new KidItemModel('../../assets/jeans.jpg','Jeans', 8, 0, 0),
+    new KidItemModel('../../assets/tshirt.png','T-shirt', 7, 0, 0)
   ];
 
   constructor() { }

@@ -1,8 +1,10 @@
 export class KidItemModel {
     constructor(
         public image: string,
-        public item: string,
+        public type: string,
         public rate: number,
+        public qty: number,
+        public total: number
         
     ){}
 }

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { MenComponent } from './men/men.component';
 import { WomenComponent } from './women/women.component';
 import { KidsComponent } from './kids/kids.component';
@@ -13,11 +12,16 @@ import { WomenListComponent } from './women/women-list/women-list.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { KidListComponent } from './kids/kid-list/kid-list.component';
+import { KidlistItemComponent } from './kids/kid-list/kidlist-item/kidlist-item.component';
+import { DeliveryInfoComponent } from './delivery-info/delivery-info.component';
+
+
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
       {path: 'men', component: MenComponent},
       {path: 'women', component: WomenComponent},
-      {path: 'kids', component: KidsComponent}
+      {path: 'kids', component: KidsComponent},
+      {path: 'deliveryinfo', component: DeliveryInfoComponent}
     ]}
 ];
 
@@ -32,9 +36,12 @@ const routes: Routes = [
     HomeComponent,
     MenListComponent,
     WomenListComponent,
-    KidListComponent
+    KidListComponent,
+    KidlistItemComponent,
+    DeliveryInfoComponent
+    
   ],
   imports: [RouterModule.forRoot(routes), CommonModule, FormsModule],
   exports: [RouterModule, HomeComponent, HeaderComponent, FooterComponent, CommonModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { }``

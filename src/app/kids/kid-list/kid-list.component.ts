@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { KidItemModel } from 'src/app/shared/kid-item.model';
 import { KidItemService } from 'src/app/shared/kid-item.service';
-import { KidsSizeService } from 'src/app/shared/kid-size.service';
+
+
 
 
 
@@ -12,16 +13,15 @@ import { KidsSizeService } from 'src/app/shared/kid-size.service';
   styleUrls: ['./kid-list.component.css']
 })
 export class KidListComponent implements OnInit {
-  kidsItem:KidItemModel[] 
- 
-  constructor(private service: KidItemService, private kidsSizeService: KidsSizeService ) { }
+  kidsItem: KidItemModel[];
+  total: string;
+  constructor(private service: KidItemService) { }
 
   ngOnInit() {
-    this.kidsItem=this.service.items;
+    this.kidsItem = this.service.items;
   }
 
-  getKidSize(type:string){
-    return this.kidsSizeService.getSize(type);
-  }
+ 
 
+  
 }
