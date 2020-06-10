@@ -15,11 +15,13 @@ import { CommonModule } from '@angular/common';
 import { KidListComponent } from './kids/kid-list/kid-list.component';
 import { MenItemComponent } from './men/men-list/men-item/men-item.component';
 import { PaymentInfoComponent } from './payment/payment-info.component';
+import { WomenListitemComponent } from './women/women-list/women-listitem/women-listitem.component';
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
       {path: 'men', component: MenComponent},
       {path: 'women', component: WomenComponent},
-      {path: 'kids', component: KidsComponent}
+      {path: 'kids', component: KidsComponent},
+      {path: 'payment-info', component: PaymentInfoComponent}
     ]}
 ];
 
@@ -36,7 +38,8 @@ const routes: Routes = [
     WomenListComponent,
     KidListComponent,
     MenItemComponent,
-    PaymentInfoComponent
+    PaymentInfoComponent,
+    WomenListitemComponent
   ],
   imports: [RouterModule.forRoot(routes), CommonModule, FormsModule],
   exports: [RouterModule, MenItemComponent,    HomeComponent, HeaderComponent, FooterComponent, CommonModule]

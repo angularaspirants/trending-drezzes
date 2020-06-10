@@ -18,7 +18,7 @@ export class MenItemComponent implements OnInit {
     return this.menSizeService.getSize(x);
 }
   onClickQty(event: Event){
-    this.item.quantity = event.target.value;
+    this.item.quantity = +(event.target as HTMLInputElement).value;
     this.item.totalPrice = this.item.quantity * this.item.price;
 }
 
