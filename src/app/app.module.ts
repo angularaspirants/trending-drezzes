@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { HighlightDirective } from './directives/highlight.directive';
+import { CartItemService } from './shared/cart-item.service';
 
 
 
@@ -13,7 +14,8 @@ import { HighlightDirective } from './directives/highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective
+    HighlightDirective,
+   
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     CommonModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CartItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
