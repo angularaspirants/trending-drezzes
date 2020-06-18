@@ -14,20 +14,20 @@ import { CommonModule } from '@angular/common';
 import { KidListComponent } from './kids/kid-list/kid-list.component';
 import { KidlistItemComponent } from './kids/kid-list/kidlist-item/kidlist-item.component';
 import { DeliveryInfoComponent } from './delivery-info/delivery-info.component';
-
-
 import { MenItemComponent } from './men/men-list/men-item/men-item.component';
 import { PaymentInfoComponent } from './payment/payment-info.component';
 import { WomenListitemComponent } from './women/women-list/women-listitem/women-listitem.component';
 import { CartItemComponent } from './cart-item/cart-item.component';
-// import { PaymentInfoComponent } from './payment/payment-info.component';
+import { CartDetailComponent } from './cart-item/cart-detail/cart-detail.component';
+
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
       {path: 'men', component: MenComponent},
       {path: 'women', component: WomenComponent},
       {path: 'kids', component: KidsComponent},
       {path: 'delivery-info', component: DeliveryInfoComponent},
-      {path: 'payment-info', component: PaymentInfoComponent}
+      {path: 'payment-info', component: PaymentInfoComponent},
+      {path: 'cart-detail', component: CartDetailComponent}
     ]}
 ];
 
@@ -48,10 +48,11 @@ const routes: Routes = [
     MenItemComponent,
     PaymentInfoComponent,
     WomenListitemComponent,
-    CartItemComponent
-    // PaymentInfoComponent
+    CartItemComponent,
+    CartDetailComponent
+    
   ],
   imports: [RouterModule.forRoot(routes), CommonModule, FormsModule],
-  exports: [RouterModule, MenItemComponent,    HomeComponent, HeaderComponent, FooterComponent, CommonModule]
+  exports: [RouterModule, MenItemComponent, HomeComponent, HeaderComponent, FooterComponent, CommonModule, CartItemComponent]
 })
 export class AppRoutingModule { }``
