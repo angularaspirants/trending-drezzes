@@ -20,14 +20,21 @@ import { MenItemComponent } from './men/men-list/men-item/men-item.component';
 import { PaymentInfoComponent } from './payment/payment-info.component';
 import { WomenListitemComponent } from './women/women-list/women-listitem/women-listitem.component';
 import { CartItemComponent } from './cart-item/cart-item.component';
-// import { PaymentInfoComponent } from './payment/payment-info.component';
+import { ManageCardComponent } from './manage-card/manage-card.component';
+import { EditCardComponent } from './edit-card/edit-card.component';
+import { DisplayCardComponent } from './display-card/display-card.component';
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
       {path: 'men', component: MenComponent},
       {path: 'women', component: WomenComponent},
       {path: 'kids', component: KidsComponent},
       {path: 'delivery-info', component: DeliveryInfoComponent},
-      {path: 'payment-info', component: PaymentInfoComponent}
+      {path: 'payment-info', component: PaymentInfoComponent},
+      {path: 'manage-card', component: ManageCardComponent,
+        children: [
+          {path: 'edit-card', component: EditCardComponent},
+          {path: 'display-card', component: DisplayCardComponent}
+        ]}
     ]}
 ];
 
@@ -48,10 +55,12 @@ const routes: Routes = [
     MenItemComponent,
     PaymentInfoComponent,
     WomenListitemComponent,
-    CartItemComponent
-    // PaymentInfoComponent
+    CartItemComponent,
+    ManageCardComponent,
+    EditCardComponent,
+    DisplayCardComponent
   ],
   imports: [RouterModule.forRoot(routes), CommonModule, FormsModule],
-  exports: [RouterModule, MenItemComponent,    HomeComponent, HeaderComponent, FooterComponent, CommonModule]
+  exports: [RouterModule, MenItemComponent, HomeComponent, HeaderComponent, FooterComponent, CommonModule]
 })
-export class AppRoutingModule { }``
+export class AppRoutingModule { }

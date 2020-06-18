@@ -13,13 +13,10 @@ import { CartItemService } from './shared/cart-item.service';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     HighlightDirective
-    
-       
   ],
   imports: [
     BrowserModule,
