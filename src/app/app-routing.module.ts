@@ -20,6 +20,9 @@ import { MenItemComponent } from './men/men-list/men-item/men-item.component';
 import { PaymentInfoComponent } from './payment/payment-info.component';
 import { WomenListitemComponent } from './women/women-list/women-listitem/women-listitem.component';
 import { CartItemComponent } from './cart-item/cart-item.component';
+import { ManageAddressComponent } from './manage-address/manage-address.component';
+import { DisplayAddressComponent } from './manage-address/display-address/display-address.component';
+import { EditAddressComponent } from './manage-address/edit-address/edit-address.component';
 // import { PaymentInfoComponent } from './payment/payment-info.component';
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
@@ -27,7 +30,8 @@ const routes: Routes = [
       {path: 'women', component: WomenComponent},
       {path: 'kids', component: KidsComponent},
       {path: 'delivery-info', component: DeliveryInfoComponent},
-      {path: 'payment-info', component: PaymentInfoComponent}
+      {path: 'payment-info', component: PaymentInfoComponent},
+      {path: 'manage-address', component: ManageAddressComponent}
     ]}
 ];
 
@@ -48,7 +52,10 @@ const routes: Routes = [
     MenItemComponent,
     PaymentInfoComponent,
     WomenListitemComponent,
-    CartItemComponent
+    CartItemComponent,
+    ManageAddressComponent,
+    DisplayAddressComponent,
+    EditAddressComponent
     // PaymentInfoComponent
   ],
   imports: [RouterModule.forRoot(routes), CommonModule, FormsModule],

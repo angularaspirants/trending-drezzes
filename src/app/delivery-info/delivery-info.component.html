@@ -1,21 +1,19 @@
-
+    <h1>Delivery Address</h1>
+    <label for="primaryaddress">Is this primary address</label><br> 
+    <input type="checkbox"><br>
     <label for="fname">First name:</label><br>
-    <input type="text" [(ngModel)]="firstName"><br>
+    <input type="text" [(ngModel)]="AddressModel.firstName"><br>
     <label for="lname">Last name:</label><br>
-    <input type="text" [(ngModel)]="lastName"><br>
-    <label for="lname">Street Address:</label><br>
-    <input type="text" [(ngModel)]="streetAddress"><br>
-    <label for="lname">City:</label><br>
-    <input type="text" [(ngModel)]="city"><br>
-    <label for="lname">ZipCode:</label><br>
-    <input type="number" [(ngModel)]="zipCode"><br>
-    <label for="phone">Phone number:</label><br>
-    <input type="number" [(ngModel)]="phoneNumber"><br>
+    <input type="text" [(ngModel)]="AddressModel.lastName"><br>
+    <label for="lname">Email:</label><br>
+    <input type="text" [(ngModel)]="AddressModel.email"><br>
+    <label for="lname">Contact:</label><br>
+    <input type="text" [(ngModel)]="AddressModel.contact"><br>
+    <label for="lname">Address:</label><br>
+    <input type="number" [(ngModel)]="AddressModel.addressType"><br>
+    <label for="phone">State:</label><br>
+    <input type="number" [(ngModel)]="AddressModel.state"><br>
+    <label for="phone">City:</label><br>
+    <input type="number" [(ngModel)]="AddressModel.city"><br>
     <button>Submit</button>
-    <h3>Address</h3>
-    <p>{{firstName}}</p>
-    <p>{{lastName}}</p>
-    <p>{{streetAddress}}</p>
-    <p>{{city}}</p>
-    <p>{{zipCode}}</p>
-    <p>{{phoneNumber}}</p>
+    

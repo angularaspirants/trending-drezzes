@@ -6,7 +6,8 @@ export class AddressModel {
         public contact: number,
         public addressType: string,
         public state: string,
-        public city: string
+        public city: string,
+        public zipcode: number
     ){
 
     }
