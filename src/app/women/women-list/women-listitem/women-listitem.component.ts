@@ -22,7 +22,6 @@ export class WomenListitemComponent implements OnInit {
     return this.womenSizeService.getSize(type);
   }
   onAddToBagClicked(){
-    // return this.cartItemService.cartItems[0];
-    this.cartItemService.addItemToCart(this.womenItem);
+       this.cartItemService.addItemToCart(this.womenItem);
   }
 }
