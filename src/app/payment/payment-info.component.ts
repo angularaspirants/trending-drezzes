@@ -7,7 +7,7 @@ import { AddressModel } from '../shared/address.model';
   styleUrls: ['./payment-info.component.css']
 })
 export class PaymentInfoComponent {
-    billingAddress = new AddressModel('', '', '', 0, '', '', '');
+    billingAddress = new AddressModel('', '', '', 0, '', '', '', 0);
 
   constructor() { }
 
